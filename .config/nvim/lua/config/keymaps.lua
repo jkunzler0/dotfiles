@@ -12,3 +12,8 @@ vim.keymap.set({ "n", "v" }, "<leader>j", "J", { noremap = true, desc = "Join li
 
 -- Save file
 vim.keymap.set("n", "<leader>W", "<cmd>w<cr>", { noremap = true, desc = "Save window" })
+
+-- Window resizing
+vim.keymap.set("n", "<C-S-Left>", "<C-Left>", { noremap = true, desc = "Decrease Window Width" })
+vim.keymap.set("n", "<C-S-Right>", "<C-Right>", { noremap = true, desc = "Increase Window Width" })
+
