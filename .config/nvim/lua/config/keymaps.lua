@@ -14,6 +14,7 @@ vim.keymap.set({ "n", "v" }, "<leader>j", "J", { noremap = true, desc = "Join li
 vim.keymap.set("n", "<leader>W", "<cmd>w<cr>", { noremap = true, desc = "Save window" })
 
 -- Window resizing
-vim.keymap.set("n", "<C-S-Left>", "<C-Left>", { noremap = true, desc = "Decrease Window Width" })
-vim.keymap.set("n", "<C-S-Right>", "<C-Right>", { noremap = true, desc = "Increase Window Width" })
-
+vim.keymap.set("n", "<S-Right>", "<cmd>vertical resize +2<cr>", { noremap = true, desc = "Increase Window Width" })
+vim.keymap.set("n", "<S-Left>", "<cmd>vertical resize -2<cr>", { noremap = true, desc = "Decrease Window Width" })
+vim.keymap.set("n", "<S-Up>", "<cmd>horizontal resize +2<cr>", { noremap = true, desc = "Increase Window Height" })
+vim.keymap.set("n", "<S-Down>", "<cmd>horizontal resize -2<cr>", { noremap = true, desc = "Decrease Window Height" })

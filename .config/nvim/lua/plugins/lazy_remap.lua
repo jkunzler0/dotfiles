@@ -20,5 +20,13 @@ return {
       keys[#keys + 1] = { "gk", vim.lsp.buf.hover, desc = "Hover" }
     end,
   },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = {
+  --     pumblend = {
+  --       enabled = false,
+  --     },
+  --   }
+  -- }
 }
 
