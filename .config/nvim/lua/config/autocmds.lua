@@ -9,8 +9,23 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+-- vim.api.nvim_create_autocmd({ "InsertLeave", "TextChanged" }, {
+--   pattern = { "*" },
+--   command = "silent! wall",
+--   nested = true,
+-- })
+
+-- auto save buffer
+-- if vim.options.auto_save then
+vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
   pattern = { "*" },
-  command = "silent! wall",
+  callback = function()
+    if vim.bo.ft == "harpoon" then
+      return
+    end
+    vim.cmd("silent! wall")
+  end,
   nested = true,
 })
+-- end
+
